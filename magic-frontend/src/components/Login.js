@@ -14,7 +14,10 @@ function Login() {
   };
   fetch('http://localhost:8000/api/signup', requestOptions)
   .then(response => response.json())
-  .then(response => setSuccessMessage(response.success_message));
+  .then(response => {
+    response.success_message? setSuccessMessage(response.success_message):setSuccessMessage(response.error_message)
+    
+  })
   }
   return (
     <>
@@ -22,7 +25,7 @@ function Login() {
         <div className='row justify-content-center mt-5 pb-4'>
           <div className="col-md-4">
             <div className="card">
-              <div className ="card-header">
+              <div className ="card-header" style={{backgroundColor: "#00bfef"}}>
                 <center>
                   <h4>Login</h4>
                 </center>
@@ -34,7 +37,7 @@ function Login() {
                   <input type="email" className="form-control" placeholder="Email Address"  name="email" onChange={(event) => setEmail(event.target.value)} value={email}/>
                   </div>
                   <div><p>Please, enter your email Address</p></div>
-                  <div align="center"><input type="submit" value="let's go"/></div>
+                  <div align="center"><input style={{backgroundColor: "#00bfef"}} type="submit" value="let's go"/></div>
                   <p style={{color: "green"}}>{successMessage}</p>
                 </form>
               </div>

@@ -5,22 +5,22 @@ import {Link} from 'react-router-dom'
 function NavBar() {
   return (
     <>
-    <Navbar bg="dark" variant="dark"  sticky="top">
-        <Container>
+    <Navbar style={{backgroundColor: "#6296cb"}} variant="dark"  sticky="top">
+        <Container >
             <Navbar.Brand href="/">
-            <img
+            {/* <img
                 alt=""
                 src=''
                 width="30"
                 height="30"
                 className="d-inline-block align-top"
-            />{' '}
+            />{' '} */}
             MTD
             </Navbar.Brand>
         </Container>
         <Nav>
-            <Link to=""><Button variant="dark">Logout</Button></Link>
-            <Link to="login"><Button variant="dark">Login</Button></Link>
+            {/* <Link to=""><Button variant="dark">Logout</Button></Link> */}
+            {/* <Link to=""><Button variant="dark">Login</Button></Link> */}
         </Nav>
     </Navbar>
   </>

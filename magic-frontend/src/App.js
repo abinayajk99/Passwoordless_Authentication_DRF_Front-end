@@ -12,8 +12,8 @@ function App() {
       <Router>
       <NavBar/>
         <Routes>
-          <Route path="/" element={<HomeProduct />}></Route>
-          <Route path="/login" element={<Login/>}></Route>
+          {/* <Route path="/" element={<HomeProduct />}></Route> */}
+          <Route path="/" element={<Login/>}></Route>
           <Route path="/magiclink/:token/:email" element={<MagicLink/>}></Route>
         </Routes>
       </Router>
